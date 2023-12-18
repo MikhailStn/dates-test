@@ -1,0 +1,102 @@
+@font-face {
+  font-family: "PTSans";
+  src: url("../assets/PTSans.ttf");
+}
+
+@font-face {
+  font-family: "BebasNeueRegular";
+  src: url("../assets/BebasNeueRegular.ttf");
+}
+
+@font-face {
+  font-family: "PTSans-Bold";
+  src: url("../assets/PTSans-Bold.ttf");
+}
+
+* {
+  font-family: "PTSans";
+  color: #42567a;
+  font-size: 20px;
+}
+
+body {
+  margin: 0;
+}
+
+.app-container {
+  min-height: 100vh;
+  background-color: #f4f5f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.app-content {
+  max-width: 1440px;
+  min-height: 100vh;
+  display: flex;
+  padding: 20px;
+  box-sizing: border-box;
+  width: 100%;
+  border-left: 1px solid rgb(231, 231, 231);
+  border-right: 1px solid rgb(231, 231, 231);
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper {
+  width: 100%;
+  display: flex !important;
+  justify-content: center;
+  cursor: col-resize;
+}
+
+.swiper-button-next {
+  width: 40px !important;
+  height: 40px !important;
+  background-color: #fff;
+  box-shadow: 0px 0px 4px -2px #42567a;
+  border-radius: 50%;
+}
+
+.swiper-button-next::after {
+  font-size: 20px !important;
+}
+
+.swiper-button-next:hover {
+  box-shadow: 0px 0px 4px 3px #42567a17;
+}
+
+.swiper-button-prev {
+  display: none !important;
+}
+
+@media (max-width: 768px) {
+  #root {
+    min-height: 100vh;
+    background-color: #f4f5f9;
+  }
+
+  .app-content,
+  .app-container {
+    min-height: auto;
+  }
+
+  .app-content {
+    padding: 60px 20px;
+  }
+
+  .swiper-button-next {
+    display: none !important;
+  }
+
+  .swiper-slide-next {
+    opacity: 0.5;
+  }
+
+  .app-content {
+    align-items: flex-end;
+  }
+}
